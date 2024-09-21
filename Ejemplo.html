@@ -1,53 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title >Fullstack - Deyvi's HTML Example</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fullstack - Deyvi's HTML Example</title>
 </head>
+
 <body>
-    <h1 align="center">Hola mundito!</h1>
-    <p>esto es una pagina web.</p>
-    <p>Creado por : <strong> Dr Deyvi </strong> aqui tenemos un <em> paragrafo </em>.
-    </p>
-    <hr><p align="center">HEADING TYPES</p> <hr>  
-    <h1>Heading level 1</h1>
-    <h2>Heading level 2</h2>
-    <h3>Heading level 3</h3>
-    <h4>Heading level 4</h4>
-    <h5>Heading level 5</h5>
-    <h6>Heading level 6</h6>
-    <hr><p align="center">IMAGES </p><hr>  
-    <img src="imagen.jpg" border="3%" style="display: block; margin-left: auto; margin-right: auto;" alt="---"/>
-    <hr><p align="center">LINKS </p><hr>  
-    <a href="https://talentotech.gov.co/portal/" target="_blank" > Talento tech</a>
-    <br>
-    <iframe name="mm" src="Marco.html" title="Marco example" width="400" height="300"></iframe>
-    <br>
-<a target="mm" href="https://talentotech.gov.co/portal/">Talento tech chikito</a><br>
-<hr><p align="center">ORDERED LISTS </p><hr>  
-<ol type="I">
+  <h1 align="center">Hola mundito!</h1>
+  <p>esto es una pagina web.</p>
+  <p>Creado por : <strong> Dr Deyvi </strong> aqui tenemos un <em> paragrafo </em>.
+  </p>
+  <nav>
+    <ul>
+      <li><a href="#sec1">FORMULARIOS</a></li>
+      <li><a href="#sec2">javascript</a></li>
+      <li><a href="#sec3">UNORDERED LISTS </a></li>
+      <li><a href="#sec4">IMAGES </a></li>
+    </ul>
+  </nav>
+  <hr>
+  <p align="center">HEADING TYPES</p>
+  <hr>
+  <h1>Heading level 1</h1>
+  <h2>Heading level 2</h2>
+  <h3>Heading level 3</h3>
+  <h4>Heading level 4</h4>
+  <h5>Heading level 5</h5>
+  <h6>Heading level 6</h6>
+
+  <section id="sec4">
+    <hr>
+    <p align="center">IMAGES </p>
+    <hr>
+    <img src="imagen.jpg" border="3%" style="display: block; margin-left: auto; margin-right: auto;" alt="---" />
+    <hr>
+  </section>
+  <a href="#">Volver al inicio</a>
+
+  <p align="center">LINKS </p>
+  <hr>
+  <a href="https://talentotech.gov.co/portal/" target="_blank"> Talento tech</a>
+  <br>
+  <iframe name="mm" src="Marco.html" title="Marco example" width="400" height="300"></iframe>
+  <br>
+  <a target="mm" href="https://talentotech.gov.co/portal/">Talento tech chikito</a><br>
+  <hr>
+  <p align="center">ORDERED LISTS </p>
+  <hr>
+  <ol type="I">
     <li>Coffee</li>
     <li>Tea</li>
-    <li>Milk</li>   
-</ol>
-<hr><p align="center">UNORDERED LISTS </p><hr>  
-<ul type="square">
-    <li>Coffee</li>
-    <li>Tea</li>
-    <li>Milk</li>   
-</ul>
+    <li>Milk</li>
+  </ol>
+  <section id="sec3">
+    <p> align="center">UNORDERED LISTS </p>
+    <hr>
+    <ul type="square">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+  </section>
+  <hr>
+  <a href="#">Volver al inicio</a>
 
-<hr><p align="center">TABLAS </p><hr>  
 
-<table border="2" cellpadding="10" cellspacing="3">
-   <tbody style="background-color: rgba(191, 248, 134, 0.616);">
-    <tr>
-      <th>ID</th>
-      <th>Nombre</th>
-      <th>Pais</th>
-    </tr>
-   </tbody> 
+  <hr>
+  <p align="center">TABLAS </p>
+  <hr>
+
+  <table border="2" cellpadding="10" cellspacing="3">
+    <tbody style="background-color: rgba(191, 248, 134, 0.616);">
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Pais</th>
+      </tr>
+    </tbody>
     <tr align="center">
       <td>1</td>
       <td>Maria Anders</td>
@@ -60,12 +91,41 @@
     </tr>
   </table>
   <hr>
-        <p align="center">ETIQUETA div</p>
-        <hr>
-        <div style="background-color: rgb(181, 254, 255) ; color: rgb(34, 161, 44) ; padding: 25px;">
-            <p>Elemento contenido en etiqueta div</p>
-            <img src="imagen.jpg" border="3%" width="50%" height="50%" alt="---"/>
-        </div>
+  <p align="center">ETIQUETA div</p>
+  <hr>
+  <div style="background-color: rgb(181, 254, 255) ; color: rgb(34, 161, 44) ; padding: 25px;">
+    <p>Elemento contenido en etiqueta div</p>
+    <img src="imagen.jpg" border="3%" width="50%" height="50%" alt="---" />
+  </div>
+  <section id="sec2">
+    <hr>
+    <p align="center">incluir script - javascript</p>
+    <hr>
+    <p>Texto <span id="cambiar" class="resaltar"> resaltado </span> en una oracion</p>
+    <script>
+      document.getElementById("cambiar").addEventListener('click', function () {
+        this.style.color = "rgb(34, 161, 44)";
+      }); </script>
+  </section>
+  <a href="#">Volver al inicio</a>
+
+  <section id="sec1">
+    <hr>
+    <p align="center">FORMULARIOS</p>
+    <hr>
+    <form action="/login/auth" method="post"> <label>Usuario</label>
+      <input type="text" id="usuario" name="usuario" />
+      <br>
+      <label>email</label>
+      <input type="email" id="email" name="email" />
+      <br>
+      <label>Contraseña</label>
+      <input type="password" id="password" name="password" /> <br>
+      <label>Mensaje</label>
+      <textarea rows="4" cols="25" id="msg" name="msg"></textarea> <br>
+  </section>
+  <a href="#">Volver al inicio</a>
 
 </body>
+
 </html>
