@@ -5,6 +5,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fullstack - Deyvi's HTML Example</title>
+
+  <script>
+function guardarDatosL() {
+                const usuario = document.getElementById("usuario").value ;
+                const email   = document.getElementById("email").value ;
+                const passwd  = document.getElementById("password").value ;
+
+                localStorage.setItem( "usuario",usuario ) ;
+                localStorage.setItem( "email"  ,email ) ;
+                localStorage.setItem( "passwd" ,passwd ) ;
+            }
+
+            function verDatosL() {
+
+                const user   = localStorage.getItem("usuario") ;
+                const email  = localStorage.getItem("email") ;
+                const passwd  = localStorage.getItem("passwd") ;
+
+                document.getElementById("resultado").innerHTML = `Nombre: ${user} <br> Email: ${email} <br> Passwd: ${passwd}` ;
+            }
+
+            function guardarDatosS() {
+                const usuario = document.getElementById("usuario").value ;
+                const email   = document.getElementById("email").value ;
+                const passwd  = document.getElementById("password").value ;
+
+                sessionStorage.setItem( "usuario",usuario ) ;
+                sessionStorage.setItem( "email"  ,email ) ;
+                sessionStorage.setItem( "passwd" ,passwd ) ;
+            }
+
+            function verDatosS() {
+
+                const user   = sessionStorage.getItem("usuario") ;
+                const email  = sessionStorage.getItem("email") ;
+                const passwd = sessionStorage.getItem("passwd") ;
+
+                document.getElementById("resultado").innerHTML = `Nombre: ${user} <br> Email: ${email} <br> Passwd: ${passwd}` ;
+            }
+  </script>
+
 </head>
 
 <body>
@@ -18,6 +59,9 @@
       <li><a href="#sec2">javascript</a></li>
       <li><a href="#sec3">UNORDERED LISTS </a></li>
       <li><a href="#sec4">IMAGES </a></li>
+      <li><a href="#sec5">AUDIO </a></li>
+      <li><a href="#sec6">VIDEO </a></li>
+      <li><a href="#sec7">PROGRESS BAR </a></li>
     </ul>
   </nav>
   <hr>
@@ -91,7 +135,7 @@
     </tr>
   </table>
   <hr>
-  <p align="center">ETIQUETA div</p>
+  <p align="center">ETIQUETA DIV</p>
   <hr>
   <div style="background-color: rgb(181, 254, 255) ; color: rgb(34, 161, 44) ; padding: 25px;">
     <p>Elemento contenido en etiqueta div</p>
@@ -99,13 +143,12 @@
   </div>
   <section id="sec2">
     <hr>
-    <p align="center">incluir script - javascript</p>
+    <p align="center">JAVASCRIPT</p>
     <hr>
     <p>Texto <span id="cambiar" class="resaltar"> resaltado </span> en una oracion</p>
     <script>
       document.getElementById("cambiar").addEventListener('click', function () {
-        this.style.color = "rgb(34, 161, 44)";
-      }); </script>
+        this.style.color = "rgb(34, 161, 44)"; }); </script>
   </section>
   <a href="#">Volver al inicio</a>
 
@@ -113,16 +156,41 @@
     <hr>
     <p align="center">FORMULARIOS</p>
     <hr>
-    <form action="/login/auth" method="post"> <label>Usuario</label>
-      <input type="text" id="usuario" name="usuario" />
+    <form> <label>Usuario</label>
+      <input type="text" id="usuario" name="usuario" list="nombres" placeholder="Aqui va el nombre"/>
       <br>
-      <label>email</label>
+      <datalist id="nombres">
+        <option value="Juan"></option>
+        <option value="Maria"></option>
+        <option value="Lorenzo"></option>
+        <option value="Roberto"></option>
+      </datalist>
+        <br>
+      <label>E-mail</label>
       <input type="email" id="email" name="email" />
-      <br>
+      <br><br>
+
       <label>Contraseña</label>
-      <input type="password" id="password" name="password" /> <br>
+      <input type="password" id="password" name="password" /> <br><br>
       <label>Mensaje</label>
-      <textarea rows="4" cols="25" id="msg" name="msg"></textarea> <br>
+
+      <textarea rows="4" cols="25" id="msg" name="msg"></textarea> <br><br>
+      <label>Genero</label>
+      <input type="radio" name="genero" value="M">Masculino 
+      <input type="radio" name="genero" value="F">Femenino 
+      <input type="radio" name="genero" value="O">Otro <br>
+
+      <input type="submit" value="Enivar"/>
+      <br>
+      <button onclick="guardarDatosL()">Guardar en Local</button>
+      <button onclick="verDatosL()"> ver de Local</button>
+      <br>
+      <button onclick="guardarDatosS()">Guardar en Session</button>
+      <button onclick="verDatosS()"> ver de Session</button>
+    </form>
+    <div id="resultado"></div>
+
+
   </section>
   <a href="#">Volver al inicio</a>
 
@@ -140,6 +208,15 @@
     <video width="320" height="240" controls src="pokemon.mp4" type="video/mp4" >Your browser does not support the video.</video>
     
   </section>
+  <section id="sec7">
+    <hr>
+    <p align="center">PROGRESO</p>
+    <hr>
+    Status: <progress min="0" max="100" value="50"> </progress>
+    <br>
+  </section>
+  <br>
+  <a href="#">Volver al inicio</a>
 
 </body>
 
