@@ -1,0 +1,79 @@
+
+
+.resaltar {
+    color: coral;
+    font-weight: bold;
+}
+.fondo {
+    background-color: black;
+    color: gold;
+}
+
+p {
+    background-color: rgb(133, 185, 148);
+}
+
+#sec5 {
+    background-color: crimson;
+}
+
+/* estilos basicos para la pagina */
+body {
+	font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/* contenedor de elementos flex */
+.container {
+	display: flex;
+    justify-content: space-around; /* Espacio alrededor de los elementos */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;	/* redondeo para las esquinas */
+    box-shadow: 0 0 20px rgba(125, 12, 125, 0.9);
+}
+
+/* Estilos para las cajas */
+.caja {
+    background-color: #4caf50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    flex: 1; /* Flex-grow, permite que las cajas crezcan para ocupar el espacio disponible */
+    margin: 10px; /* Espacio entre las cajas */
+}
+
+.column {
+    flex-direction: column;
+}
+
+/* valores de flex-direction */
+.row {
+    flex-direction: row;	/* default */
+}
+
+button {
+    background-color: gray;
+    transition: background-color 1.5s;
+}
+
+button:hover {
+    background-color: blue;
+	color: yellow ;
+}
+
+@keyframes anima {
+	from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+.ani {
+    background-color: red;
+    animation: anima 4s infinite;
+}
