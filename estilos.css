@@ -32,16 +32,16 @@ body {
 .container {
 	display: flex;
     justify-content: space-around; /* Espacio alrededor de los elementos */
-    background-color: #ffffff;
+    background-color: #e6d1f3;
     padding: 20px;
     border-radius: 15px;	/* redondeo para las esquinas */
-    box-shadow: 0 0 20px rgba(125, 12, 125, 0.9);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0);
 }
 
 /* Estilos para las cajas */
 .caja {
-    background-color: #4caf50;
-    color: white;
+    background-color: hwb(135 66% 5%);
+    color: rgb(0, 0, 0);
     padding: 20px;
     text-align: center;
     border-radius: 5px;
@@ -69,11 +69,11 @@ button:hover {
 }
 
 @keyframes anima {
-	from {background-color: red;}
-    to {background-color: yellow;}
+	from {background-color: rgb(152, 180, 241);}
+    to {background-color: rgb(217, 132, 250);}
 }
 
 .ani {
-    background-color: red;
+    background-color: rgb(151, 240, 195);
     animation: anima 4s infinite;
 }
